@@ -6,7 +6,8 @@ COPY lib/ ./lib/
 # RUN npm install
 # If you are building your code for production, instead include a package-lock.json file on this directory and use:
 # RUN npm ci --production
-RUN npm install --global yarn && \
+RUN corepack disable && \
+    corepack enable yarn && \
     yarn --ignore-scripts && \
     yarn build && \
     yarn install --production && \
