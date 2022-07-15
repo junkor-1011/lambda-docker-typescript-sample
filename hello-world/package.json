@@ -13,7 +13,7 @@
     "lint": "eslint '*.ts' --quiet --fix",
     "compile": "tsc",
     "test": "npm run compile && npm run unit",
-    "build": "esbuild . --bundle --minify --sourcemap --platform=node --outfile=app.js --allow-overwrite"
+    "build": "esbuild . --bundle --minify --sourcemap --platform=node --format=cjs --outbase=. --outfile=app.js --allow-overwrite"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.101",
