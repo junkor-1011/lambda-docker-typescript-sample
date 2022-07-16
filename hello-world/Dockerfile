@@ -1,6 +1,6 @@
 FROM public.ecr.aws/lambda/nodejs:16
 
-WORKDIR /var/task
+WORKDIR ${LAMBDA_TASK_ROOT}
 COPY app.ts package*.json yarn.lock tsconfig.json ./
 COPY lib/ ./lib/
 
