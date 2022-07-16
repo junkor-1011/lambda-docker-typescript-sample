@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
-npm test
+. "$(dirname "$0")/_/husky.sh"
+cd hello-world || exit
+
+yarn lint-staged
+yarn test
