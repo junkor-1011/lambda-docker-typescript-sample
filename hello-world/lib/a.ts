@@ -1,3 +1,3 @@
 export default function () {
-  return (new Date()).toISOString()
+  return new Date().toISOString();
 }
